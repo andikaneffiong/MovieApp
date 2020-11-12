@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/image_vertical_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/vertical_line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/select_your_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Your \nCity"
+                app:layout_constraintStart_toEndOf="@id/image_vertical_line"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="@id/image_vertical_line"
+                android:layout_marginBottom="25dp"
+                android:textSize="15dp"
+                android:layout_marginStart="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/image_badge"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="250dp"
+                android:src="@drawable/badge_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/select_your_text"
+                app:layout_constraintTop_toTopOf="@id/select_your_text" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <EditText
+            android:id="@+id/edit_text_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/border_circle"
+            android:backgroundTint="#E9E9E9"
+            android:drawableEnd="@drawable/ic_baseline_search_24"
+            android:hint="@string/search"
+            android:padding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="70dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraint_1" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="29dp"
+            android:src="@drawable/notifications_ic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edit_text_search"
+            app:layout_constraintTop_toTopOf="@id/edit_text_search"
+
+            />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="352dp"
+            android:layout_height="104dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.439"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_search">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="2dp"
+                app:cardCornerRadius="10dp">
+                <androidx.viewpager2.widget.ViewPager2
+
+                    android:id="@+id/aqua_viewpager"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/hero_tabs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_gravity="bottom|center"
+                    app:tabBackground="@drawable/tab_default"
+                    app:tabGravity="center"
+                    android:background="@null"
+                    app:tabIndicator="@drawable/tab_selected"
+                    app:tabIndicatorColor="@color/black"
+                    app:tabIndicatorGravity="center"
+
+                    >
+
+
+
+                </com.google.android.material.tabs.TabLayout>
+
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="319dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            app:tabIndicatorColor="@color/black"
+            app:tabSelectedTextColor="@color/black"
+            android:scrollbars="vertical"
+            app:tabGravity="center"
+            app:tabIndicator="@drawable/tab_selected"
+            >
+
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <View
+
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_text_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_search" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conty"
+            android:layout_width="match_parent"
+            android:layout_height="497dp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tablayout">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="387dp"
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.584" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

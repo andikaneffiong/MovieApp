@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">search</string>
+    <string name="message">Movies</string>
+    <string name="drama">Drama</string>
+    <string name="shows">Shows</string>
+    <string name="new_release">New Release</string>
+    <string name="longest_ride">Longest Ride</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="watch_trailer">watch trailer</string>
+    <string name="aquaman1">Aquaman</string>
+    <string name="aquaman">Aquaman</string>
+    <string name="for_offer">for offer</string>
+    <string name="u_a">U/A</string>
+
+
+    <string name="about">
+
+
+        Half-human, half-Atlantean Arthur is born with the ability to communicate with marine creatures.He goes on a quest to retrieve
+        the legendary Trident of Atlan and protect the water world
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </string>
+    <string name="id">3D</string>
+    <string name="hd">HD</string>
+</resources>
